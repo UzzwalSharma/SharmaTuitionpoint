@@ -6,7 +6,8 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Responsive grid: 1 col on mobile, 2 on md, 4 on lg */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
@@ -22,7 +23,7 @@ const Footer = () => {
                 Providing quality education from Class 5 to Post Graduation with experienced faculty 
                 and a satisfaction-first approach.
               </p>
-              <div className="flex space-x-3">
+              <div className="flex flex-wrap gap-2">
                 <a href="#" className="bg-gray-700 p-2 rounded-lg hover:bg-blue-500 transition-colors">
                   <Facebook className="h-5 w-5" />
                 </a>
@@ -90,29 +91,31 @@ const Footer = () => {
               </div>
             </div>
           </div>
-  <a
-        href="https://wa.me/919876543210"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="animate-bounce fixed bottom-6 right-6 z-50 bg-green-500 rounded-full p-3 shadow-lg hover:bg-green-600 transition-colors"
-        aria-label="Contact us on WhatsApp"
-      >
-        {/* Improved WhatsApp SVG Icon */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={42}
-          height={42}
-          viewBox="0 0 32 32"
-          fill="none"
-       
-        >
-          <circle cx="16" cy="16" r="16" fill="#25D366" />
-          <path
-            d="M16 7.5c-4.7 0-8.5 3.7-8.5 8.3 0 1.5.4 2.9 1.1 4.1L7 25l5.3-1.4c1.2.6 2.5.9 3.7.9 4.7 0 8.5-3.7 8.5-8.3S20.7 7.5 16 7.5zm0 15.1c-1.1 0-2.2-.3-3.2-.8l-.2-.1-3.1.8.8-3-.2-.2c-.7-1.1-1.1-2.3-1.1-3.6 0-3.7 3.2-6.7 7.1-6.7s7.1 3 7.1 6.7-3.2 6.7-7.1 6.7zm4-5.1c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1-.1.2-.5.7-.6.8-.1.1-.2.2-.4.1-.9-.3-1.7-.7-2.4-1.6-.2-.2-.2-.3 0-.5.1-.1.2-.2.3-.4.1-.1.1-.2.2-.3.1-.1.1-.2 0-.4-.1-.1-.5-1.2-.7-1.6-.2-.4-.3-.3-.5-.3h-.4c-.2 0-.4.1-.5.3-.2.2-.7.7-.7 1.7 0 1 .7 2 1 2.3.1.2 1.4 2.3 3.5 3.1.5.2.9.4 1.2.5.5.2.9.1 1.2.1.4-.1 1.2-.5 1.4-1 .2-.5.2-.9.1-1-.1-.1-.2-.1-.4-.2z"
-            fill="#fff"
-          />
-        </svg>
-      </a>
+
+          {/* WhatsApp Floating Button */}
+          <a
+            href="https://wa.me/919876543210"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="animate-bounce fixed bottom-6 right-6 z-50 bg-green-500 rounded-full p-3 shadow-lg hover:bg-green-600 transition-colors"
+            aria-label="Contact us on WhatsApp"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width={42}
+              height={42}
+              viewBox="0 0 32 32"
+              fill="none"
+            >
+              <circle cx="16" cy="16" r="16" fill="#25D366" />
+              <path
+                d="M16 7.5c-4.7 0-8.5 3.7-8.5 8.3 0 1.5.4 2.9 1.1 4.1L7 25l5.3-1.4c1.2.6 2.5.9 3.7.9 4.7 0 8.5-3.7 8.5-8.3S20.7 7.5 16 7.5zm0 15.1c-1.1 0-2.2-.3-3.2-.8l-.2-.1-3.1.8.8-3-.2-.2c-.7-1.1-1.1-2.3-1.1-3.6 0-3.7 3.2-6.7 7.1-6.7s7.1 3 7.1 6.7-3.2 6.7-7.1 6.7zm4-5.1c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1-.1.2-.5.7-.6.8-.1.1-.2.2-.4.1-.9-.3-1.7-.7-2.4-1.6-.2-.2-.2-.3 0-.5.1-.1.2-.2.3-.4.1-.1.1-.2.2-.3.1-.1.1-.2 0-.4-.1-.1-.5-1.2-.7-1.6-.2-.4-.3-.3-.5-.3h-.4c-.2 0-.4.1-.5.3-.2.2-.7.7-.7 1.7 0 1 .7 2 1 2.3.1.2 1.4 2.3 3.5 3.1.5.2.9.4 1.2.5.5.2.9.1 1.2.1.4-.1 1.2-.5 1.4-1 .2-.5.2-.9.1-1-.1-.1-.2-.1-.4-.2z"
+                fill="#fff"
+              />
+            </svg>
+          </a>
+
+          {/* Footer Bottom */}
           <div className="border-t border-gray-700 mt-8 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-center md:text-left">
@@ -120,12 +123,12 @@ const Footer = () => {
                   &copy; 2025 Sharma Tuition Point. All rights reserved.
                 </p>
               </div>
-              <div className="flex space-x-6 text-sm">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 text-sm items-center">
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">Terms of Service</a>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">Refund Policy</a>
               </div>
-              <span>Made with ❤️ by Ujjwal Sharma</span>
+              <span className="text-center">Made with <span role="img" aria-label="love">❤️</span> by Ujjwal Sharma</span>
             </div>
           </div>
         </div>
