@@ -34,9 +34,9 @@ const Header = () => {
               <Phone className="h-4 w-4 text-blue-500" />
               <span>+91 98765 43210</span>
             </div>
-            <button className="text-sm px-3 py-1.5 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
+            {/* <button className="text-sm px-3 py-1.5 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
               Free Demo
-            </button>
+            </button> */}
 
             {/* Mobile Menu Button */}
             <button
